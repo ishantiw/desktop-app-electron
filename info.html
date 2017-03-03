@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>My Electron App</title>
+  <meta name="description" content="My Electron APP">
+  <meta name="author" content="Ishan Tiwari">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="app.css">
+  <script type="text/javascript">
+    let electron = require('electron');
+    let shell = electron.shell;
+    let ipc = electron.ipcRenderer;
+  </script>
+</head>
+<body id="page-info">
+    <main class="info-content">
+        <h3 class="page-headline">Fake University: Students</h3>
+        <p>
+            Welcome to Student Data App <br>
+            <strong>version 1.0.0</strong>
+            <small> Build with style by <a href="#", onclick="shell.openExternal('http://ishantiw.github.io')">Ishan Tiwari</a></small>
+        </p>
+        <p><a href="#" onclick="ipc.sendSync('closeInfoWindow')">Close window</a></p>
+        </main>
+</body>
+</html>
